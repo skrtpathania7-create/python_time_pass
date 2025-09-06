@@ -1,0 +1,33 @@
+electricity_unit = int(input("enter the electricity unit consumed: "))
+if electricity_unit <= 100:
+    bill = electricity_unit * 5
+elif electricity_unit <= 200:
+    bill = 100 * 5 + (electricity_unit - 100) * 7
+elif electricity_unit >= 200:
+    bill = 100 * 5 + 100 * 7 + (electricity_unit - 200) * 10
+print(f"your final electricity bill is: {bill}")
+
+blance = 9000000
+amount = float(input("please enter the needed amount: "))
+if amount % 5 == 0 :
+    blance -= amount
+    print(f"your transaction is successful and your remaining balance is {blance}")
+    print(f"your remaining balance: {blance:.2f}")
+elif amount % 5 != 0:
+    print(f" cannot proceed with the transaction ")
+else:
+    print("not sufficient funds")
+
+bill = float(input("enter the final bill amount $: "))
+if bill>=5000:
+    discount = bill *0.2
+elif bill>=3000:
+    discount = bill *0.15
+elif bill>=1000:
+    discount = bill*0.1
+else:
+    discount = 0
+final_price = bill - discount
+print(f"original bill : ${bill:.2f}")
+print(f"discount: ${discount:.2f}")
+print(f"final price that the customer has to deposit: ${final_price:.2f}")
